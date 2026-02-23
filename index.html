@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matching Activity</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Drag-and-Drop Matching Activity</h1>
+    <p class="intro">Drag each term card to the matching definition.</p>
+
+    <section class="status-bar" aria-live="polite">
+      <p id="score">0/4 correct</p>
+      <button id="resetButton" type="button">Reset</button>
+    </section>
+
+    <section>
+      <h2>Terms</h2>
+      <div id="termBank" class="term-bank" aria-label="Term cards">
+        <!--
+          Beginner note:
+          data-term is used to identify each card in JavaScript.
+          draggable="true" enables drag behavior in the browser.
+        -->
+        <div class="term-card" id="term-authority" data-term="Authority" draggable="true">Authority</div>
+        <div class="term-card" id="term-boundaries" data-term="Boundaries" draggable="true">Boundaries</div>
+        <div class="term-card" id="term-collaboration" data-term="Collaboration" draggable="true">Collaboration</div>
+        <div class="term-card" id="term-confidentiality" data-term="Confidentiality" draggable="true">Confidentiality</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Definitions</h2>
+      <div class="definitions-grid">
+        <!--
+          Beginner note:
+          data-match stores the correct term for each definition drop zone.
+        -->
+        <div class="drop-zone" data-match="Authority">
+          <p><strong>Authority</strong> — The power to enforce rules and make decisions.</p>
+          <p class="feedback"></p>
+        </div>
+
+        <div class="drop-zone" data-match="Boundaries">
+          <p><strong>Boundaries</strong> — Guidelines that establish acceptable interactions between people.</p>
+          <p class="feedback"></p>
+        </div>
+
+        <div class="drop-zone" data-match="Collaboration">
+          <p><strong>Collaboration</strong> — Working jointly with others to achieve a common goal.</p>
+          <p class="feedback"></p>
+        </div>
+
+        <div class="drop-zone" data-match="Confidentiality">
+          <p><strong>Confidentiality</strong> — Protecting private information from being shared without permission.</p>
+          <p class="feedback"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

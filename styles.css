@@ -1,0 +1,121 @@
+/*
+  Simple, beginner-friendly styling.
+  Everything here is optional visual polish for readability.
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f8fb;
+  margin: 0;
+  color: #1f2937;
+}
+
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+h1,
+h2 {
+  margin-bottom: 0.5rem;
+}
+
+.intro {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+.status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+#resetButton {
+  border: 1px solid #9ca3af;
+  background: #fff;
+  border-radius: 6px;
+  padding: 0.5rem 0.9rem;
+  cursor: pointer;
+}
+
+#resetButton:hover {
+  background: #f3f4f6;
+}
+
+.term-bank {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.term-card {
+  background: #ffffff;
+  border: 2px solid #3b82f6;
+  border-radius: 8px;
+  padding: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: grab;
+}
+
+.term-card:active {
+  cursor: grabbing;
+}
+
+.term-card.locked {
+  border-color: #10b981;
+  background: #ecfdf5;
+  cursor: default;
+}
+
+.definitions-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.9rem;
+}
+
+.drop-zone {
+  background: #fff;
+  border: 2px dashed #9ca3af;
+  border-radius: 8px;
+  padding: 0.9rem;
+  min-height: 110px;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.drop-zone.hovered {
+  background: #eff6ff;
+  border-color: #3b82f6;
+}
+
+.drop-zone.correct {
+  border-style: solid;
+  border-color: #10b981;
+  background: #ecfdf5;
+}
+
+.feedback {
+  font-weight: 700;
+  min-height: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.feedback.correct-text {
+  color: #047857;
+}
+
+.feedback.try-again-text {
+  color: #b91c1c;
+}
